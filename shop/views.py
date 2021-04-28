@@ -1,7 +1,23 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def home(request):
-    return HttpResponse('<h1> Hello </h1>')
+    return render(request, 'base.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def goods_and_services(request):
+    return render(request, 'goods_and_services.html')
+
+
+def cont(request):
+    return render(request, 'cont.html')
+
+
+def articles(request):
+    return render(request, 'articles.html')
 
 # Create your views here.
