@@ -34,17 +34,24 @@
               <li class="nav-item"><a class="nav-link" href="{% url 'cont' %}">Контакты</a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'articles' %}">Сатьи</a></li>
             </ul>
+        <div class="nav navbar-nav navbar-right">
+          <form >
+            <div class="input-group">
+              <input type="text" placeholder="Поиск">
 
-        <form >
-          <div class="input-group">
-            <input type="text" placeholder="Поиск">
-
-            <div>
-              <button>Найти</button>
+              <div>
+                <button>Найти</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
+      <div class="nav navbar-nav navbar-right">
+         <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Регистрация</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Вход</a></li>
+        </ul>
+        </div>
     </nav>
   {% block home %}
     <h1>Добро пожаловать в интернет магазин!</h1>
@@ -81,9 +88,9 @@
         </div>
       </div>
 
-    </div>
-    {% endfor %}
 
+    {% endfor %}
+  </div>
   </div>
 
   {% endblock %}
