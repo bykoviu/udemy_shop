@@ -20,4 +20,7 @@ def cont(request):
 def articles(request):
     return render(request, 'articles.html')
 
+def prod(request):
+    return render(request, 'prod.html')
+
 # Create your views here.

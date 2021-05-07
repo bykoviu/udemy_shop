@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #86B32D;">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="" alt=""></a>
+      <batton class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </batton>
+      <div id="navbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Главная</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'goods_and_services' %}">Товары и услуги</a>
+                <div class="dropdown-menu">
+                  <a class="drop-down-item">Товары</a><br>
+                  <a class="drop-down-item">Услуги</a>
+                  <a class="drop-down-item">Товары</a><br>
+                  <a class="drop-down-item">Услуги</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О нас</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'cont' %}">Контакты</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'articles' %}">Сатьи</a></li>
+            </ul>
+        <div class="nav navbar-nav navbar-right">
+          <form >
+            <div class="input-group">
+              <input type="text" placeholder="Поиск">
+
+              <div>
+                <button>Найти</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="nav navbar-nav navbar-right">
+         <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Регистрация</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Вход</a></li>
+        </ul>
+        </div>
+    </nav>
