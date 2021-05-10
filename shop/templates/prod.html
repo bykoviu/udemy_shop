@@ -10,7 +10,7 @@
 <div class="container py-5">
     <div class="row mt-5">
         <div class="col-10 mx-auto col-md-6 my-3">
-            <img src="{% static 'images/tovar.png'%}" alt="">
+            <img src="{{product.image.url}}" alt="">
 
         </div>
 
@@ -18,13 +18,18 @@
 
 </div>
 <div class="col-10 mx-auto col-md-6 my-3">
-    <h1 class="product_title"> Лучший сорт</h1>
-    <h5 class="text-info font-italic mb-4">$ 9.99</h5>
-    <p class="prod_descr">Краткое описание</p>
-    <p class="text-justify prod_text"> Детальное описание тоара. <br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie iaculis tortor, vitae lobortis nunc pretium non. Aliquam bibendum sed sem et sagittis. Sed et aliquet justo, sed dictum purus. Proin eget eleifend nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at porttitor dolor, eu elementum mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec diam diam, lobortis sed ornare ac, scelerisque tincidunt leo. Nulla facilisi. Nullam pellentesque pulvinar magna ut faucibus.
-    </p>
+    <h1 class="product_title"> {{product.name}}</h1>
+    <h5 class="text-info font-italic mb-4">{{product.price}}</h5>
 
+    <p class="text-justify prod_text"> {{product.description}}
+
+    </p>
+    {% if product.stock <= 0 %}
+
+    <p class="text-justify prod_text"> Нет в наличии</p>
+    {% else %}
+    <a href="">Добавить в корзину</a>
+    {% endif %}
 
 
 </div>
