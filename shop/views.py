@@ -11,7 +11,7 @@ def home(request, category_slug=None):
     else:
         products = Product.objects.all().filter(available=True)
 
-    return render(request, 'base.html', {'category':category_page, 'products':products})
+    return render(request, 'base.html', {'category': category_page, 'products': products})
 
 
 def about(request):
