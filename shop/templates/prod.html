@@ -28,7 +28,7 @@
 
     <p class="text-justify prod_text"> Нет в наличии</p>
     {% else %}
-    <a href="{% url 'add_cart' product_id %}">Добавить в корзину</a>
+    <a href="{% url 'add_cart' product.id %}">Добавить в корзину</a>
     {% endif %}
 
 
